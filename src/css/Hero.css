@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* hero section start */
+
+.hero-section{
+    background-image: url(../../public/assets/images/gallery/gedungsate.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.hero-section .hero-container{
+    height: 100%;
+    text-align: center;
+    padding: 300px 10px 10px 10px;
+}
+
+.hero-section .hero-container img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.hero-section .hero-container h1{
+    font-size: 3rem;
+    color: rgba(88, 88, 88, 0.925) ;
+}   
+
+.hero-section .hero-container p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(88, 88, 88, 0.925);
+}
+
+.hero-section .hero-container .registration-button{
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    background: rgba(88, 88, 88, 0.925);
+    padding: 1em 2.1em 1.1em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hero-section .hero-container .registration-button:hover{
+    background: rgba(118, 118, 118, 0.925);
+    font-weight: bold;
+}
+
+@media(max-width:848px){
+    .hero-section .hero-container h1{
+        font-size: 2rem;
+    }
+    .hero-section .hero-container p{
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:678px){
+    .hero-section .hero-container h1{
+        font-size: 1.8rem;
+    }
+    .hero-section .hero-container p{
+        font-size: 1rem;
+    }
+}
+
+/* hero section end */
