@@ -10,7 +10,7 @@ const Hero = () =>{
                 <p className='fw-bold'>World Robotics & Computer Science Olympiad registration is now open! Join <br /> this prestigious event and have an unforgettable experience!
                 </p>
                  <br />
-                <a href="https://wrcso-registration-2025.vercel.app/" target="_blank" className="registration-button fw-bold">Registration</a>
+                <a href="/" target="_blank" className="registration-button fw-bold">Coming Soon</a>
             </div>
         </section>
         </> 
