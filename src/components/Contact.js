@@ -72,6 +72,7 @@ function Contact() {
                                 <img src="./assets/images/icon/phone.png" className="contact-icon" alt="" />
                                 <a href='https://wa.me/+6281770914129' target='_blank'>+62817-7091-4129</a>
                             </div>
+ 
                         </div>
 
                         <div className="social-media">
@@ -100,7 +101,7 @@ function Contact() {
                         <span className="circle one"></span>
                         <span className="circle two"></span>
                     
-                        <form action="https://formspree.io/f/xjvneprn" autoComplete='off' method='POST'>
+                        <form action="https://formspree.io/f/xwpkjjvl" autoComplete='off' method='POST'>
                             <h3 className="title fw-bold">Contact us</h3>
                             <div className="input-container">
                                 <input type="text" name="name" className="input" required/>

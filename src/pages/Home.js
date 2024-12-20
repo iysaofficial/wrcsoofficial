@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Organized from "../components/Organized";
-import Supportby from "../components/Supportby";
+// import Supportby from "../components/Supportby";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
             <Hero />
             <About />
             <Organized />
-            <Supportby />
+            {/* <Supportby /> */}
             <Footer />
         </div>
     );
