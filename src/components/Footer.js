@@ -60,31 +60,33 @@ function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        href="https://goo.gl/maps/gEzFyE9gtXEyRfA26"
+                        href="https://maps.app.goo.gl/gsy66ofvoqiWU7797"
                         className="py-1 d-block fw-bold"
                         target="_blank"
                       >
                         {" "}
-                        <i className="fa fa-map-marker me-1"></i> Jl. Kemang No.
-                        63 RT 03 RW 06
+                        <i className="fa fa-map-marker me-1"></i> Kampus I Jl.
+                        Dipatiukur No. 102-118, Kota Bandung, Jawa Barat 40132
                       </a>
-                    </li>
-                    <li>
                       <a
-                        href="https://wa.me/6281770914129"
+                        href="https://maps.app.goo.gl/yQsAWn6iLZmtft7A8"
                         className="py-1 d-block fw-bold"
                         target="_blank"
                       >
-                        <i className="fa fa-phone me-1"></i>+6281770914129
+                        {" "}
+                        <i className="fa fa-map-marker me-1"></i> Kampus II Jl.
+                        Dago No. 160-162, Kota Bandung, Jawa Barat 40132 Telepon
+                        : 022-2532134
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://wa.me/6288213248890"
-                        className="py-1 d-block fw-bold"
-                        target="_blank"
-                      >
-                        <i className="fa fa-phone me-1"></i>+6288213248890
+                      <a href="/" className="py-1 d-block fw-bold">
+                        <i className="fa fa-phone me-1"></i>022-2504119
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" className="py-1 d-block fw-bold">
+                        <i className="fa fa-phone me-1"></i>022-2506634
                       </a>
                     </li>
                     <li>
@@ -94,7 +96,7 @@ function Footer() {
                         className="py-1 d-block fw-bold"
                       >
                         <i className="fa fa-envelope me-1"></i>
-                        wrcso.official@gmail.com
+                        Fax : 022-2533754
                       </a>
                     </li>
                   </ul>
@@ -104,7 +106,7 @@ function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        href="https://www.facebook.com/profile.php?id=100063979907207"
+                        href="https://www.facebook.com/unikombandungofficial"
                         target="_blank"
                         className="py-1 d-block fw-bold"
                       >
@@ -113,16 +115,16 @@ function Footer() {
                     </li>
                     <li>
                       <a
-                        href="https://www.linkedin.com/company/indonesian-young-scientist-association-iysa"
+                        href="https://x.com/unikomtwit"
                         target="_blank"
                         className="py-1 d-block fw-bold"
                       >
-                        <i className="fab fa-linkedin-in me-1"></i>Linkedin
+                        <i className="fa-brands fa-twitter me-1"></i>Twitter
                       </a>
                     </li>
                     <li>
                       <a
-                        href="https://www.instagram.com/iysa_official/?hl=id"
+                        href="https://www.instagram.com/unikom_official/"
                         target="_blank"
                         className="py-1 d-block fw-bold"
                       >
@@ -131,11 +133,20 @@ function Footer() {
                     </li>
                     <li>
                       <a
-                        href="https://www.tiktok.com/@iysa.official"
+                        href="https://www.youtube.com/channel/UCXqRMoxTLDsAQeEqVGBTgKw"
                         target="_blank"
                         className="py-1 d-block fw-bold"
                       >
-                        <i className="fab fa-tiktok me-1"></i>Tiktok
+                        <i className="fab fa-youtube me-1"></i>Youtube
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://line.me/R/ti/p/%40akg4621f"
+                        target="_blank"
+                        className="py-1 d-block fw-bold"
+                      >
+                        <i className="fa-brands fa-line me-1"></i>Line
                       </a>
                     </li>
                   </ul>
