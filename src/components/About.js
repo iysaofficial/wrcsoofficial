@@ -31,7 +31,7 @@ const About = () => {
                   students' insights, knowledge and abilities in applying their
                   scientific knowledge.Therefore, the Indonesian Young Scientist
                   Association (IYSA) will hold an international competition
-                  called "Bali International Science Fair" as the right learning
+                  called "World Robotics & Computer Science Olympiad" as the right learning
                   platform to nurture our talented young inventors. active,
                   creative and innovative.The Indonesian Young Scientist
                   Association (IYSA) is an institution engaged in developing the
