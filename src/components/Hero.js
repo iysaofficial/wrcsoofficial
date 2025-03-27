@@ -11,6 +11,7 @@ const Hero = () =>{
                 </p>
                  <br />
                 <a href="/" target="_blank" className="registration-button fw-bold">Coming Soon</a>
+                <a href="/homeregist" className="registration-button fw-bold">Registration</a>
             </div>
         </section>
         </> 

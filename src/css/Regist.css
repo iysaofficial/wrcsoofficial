@@ -1,0 +1,330 @@
+/* HOMEREGIST START */
+/* HOMEREGIST START */
+.homeregist-section {
+    /* padding: 75px 25px 75px 25px  ; */
+    height: 100vh;
+    /* background: var(--warna-tulisan); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--warna-tulisan2) !important;
+  }
+  
+  /* HOMEREGIST END */
+  /* HOMEREGIST END */
+  
+  /* REGISTRATION START */
+  /* REGISTRATION START */
+  .registration-section {
+    padding: 10rem 25px 75px 25px;
+    /* background: var(--warna-sekunder); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--warna-tulisan2) !important;
+  }
+  
+  .registration-section .container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .registration-section .container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+  }
+  .registration-section .content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0 20px 0;
+  }
+  .registration-section form .user-details .input-box {
+    margin-bottom: 30px;
+    width: calc(100% / 2 - 20px);
+    color: var(--warna-primary);
+    font-size: clamp(14px, 2vw, 24px);
+  }
+  .registration-section form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .registration-section .form-label {
+    color: var(--warna-tulisan2);
+    font-size: clamp(16px, 2vw, 24px);
+  }
+  .registration-section .gam {
+    display: flex;
+  }
+  
+  .registration-section .user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid var(--warna-primary) !important;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .registration-section .user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid var(--warna-primary) !important;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .registration-section .user-details .input-box p {
+    font-size: 11px;
+    color: var(--warna-tulisan2);
+  }
+  .registration-section .user-details .input-box h6 {
+    color: var(--warna-tulisan2);
+  }
+  
+  .registration-section .container .content .sub {
+    font-weight: bold;
+    font-size: clamp(30px, 4vw, 50px);
+  }
+  
+  .registration-section .garis-bawah::after {
+    position: absolute;
+    content: "";
+    background: var(--warna-primary);
+    height: 4px;
+    width: 50%;
+    left: 10%;
+    transform: translateX(-50%);
+  }
+  
+  .registration-section .user-details .input-box textarea {
+    height: 80px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid var(--warna-primary) !important;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .registration-section .user-details .input-box input:focus,
+  .registration-section .user-details .input-box input:valid {
+    border-color: #6f42c1;
+  }
+  
+  .registration-section .user-details .input-box textarea:focus,
+  .registration-section .user-details .input-box textarea:valid {
+    border-color: #6f42c1;
+  }
+  
+  .registration-section .user-details .input-box select:focus,
+  .registration-section .user-details .input-box select:valid {
+    border-color: #6f42c1;
+  }
+  
+  .registration-section form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .registration-section form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+  }
+  .registration-section form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .registration-section form .btn {
+    height: 45px;
+    margin: 35px 0;
+  }
+  
+  .registration-section form .button input {
+    padding : 5px;
+    width: 100% !important;
+    background-color: var(--warna-primary);
+    color: var(--warna-tulisan);
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .registration-section form .buttonindo input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: var(--warna-tulisan2);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--warna-primary);
+    display: none;
+  }
+  
+  .registration-section form .button input:hover {
+    background-color: var(--warna-sekunder);
+    transition: 0.3s;
+    box-shadow: 12px 12px #130101;
+  }
+  .registration-section form .buttonindo input:hover {
+    box-shadow: 12px 12px #da0808;
+    background-color: var(--warna-sekunder) !important;
+    color: var(--warna-tulisan);
+    border-color: #e02807;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 426px) {
+    .registration-section form .user-details .input-box {
+      margin-bottom: 15px;
+      width: 200%;
+      color: var(--warna-tulisan);
+    }
+    .registration-section form .category {
+      width: 200%;
+    }
+    .registration-section .content form .user-details {
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+    .registration-section .user-details::-webkit-scrollbar {
+      width: 5px;
+    }
+    .registration-section .container .content .con {
+      width: 23rem;
+      height: 60px;
+    }
+  }
+  
+  /* REGISTRATION END */
+  /* REGISTRATION END */
+  
+  /* TERM & CONDITION START */
+  /* TERM & CONDITION START */
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto; /* Tambahkan ini agar bisa scroll jika konten terlalu panjang */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 750px; /* Tentukan ukuran maksimum modal */
+    width: 90%; /* Buat modal responsif */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    max-height: 80vh; /* Batasi tinggi modal agar tidak keluar layar */
+    overflow-y: auto; /* Tambahkan scrollbar jika konten terlalu tinggi */
+    margin-top: 5%;
+  }
+  
+  .modal-content li {
+    font-size: clamp(10px, 2vw, 16px);
+    text-align: justify;
+  }
+  
+  .checkbox label {
+    font-weight: bold;
+    font-size: clamp(10px, 2vw, 16px);
+    text-align: center !important;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Tambahkan gaya untuk checkbox agar lebih rapi */
+  input[type="checkbox"] {
+    margin: -10px 10px 0px 10px;
+  }
+  
+  /* TERM & CONDITION END */
+  /* TERM & CONDITION END */
+  
+  /* LOADER START */
+  /* LOADER START */
+  
+  /* Overlay untuk blur */
+  .overlay-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Animasi loader */
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Keyframes untuk animasi spin */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Pesan sukses atau error */
+  .status-message {
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* LOADER END */
+  /* LOADER END */

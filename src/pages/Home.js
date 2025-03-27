@@ -4,6 +4,7 @@ import About from "../components/About";
 import Organized from "../components/Organized";
 // import Supportby from "../components/Supportby";
 import Footer from "../components/Footer";
+import Category from "../components/Category";
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
             <Hero />
             <About />
             <Organized />
+            <Category />
             {/* <Supportby /> */}
             <Footer />
         </div>
