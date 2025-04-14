@@ -252,7 +252,7 @@ function IndonesiaOnline() {
                     id="LEADER_EMAIL"
                     name="LEADER_EMAIL"
                     class="form-control"
-                    placeholder="Input Your Leader Email Address"
+                    placeholder="Email Leader Tim"
                     required
                   />
                 </div>

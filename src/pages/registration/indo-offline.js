@@ -40,7 +40,7 @@ function IndonesiaOffline() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbz_CQspO3oV_LOTX5iVSy1_v_lDQ3boMTr5gE0b0S3mxmUJ9tmWAoTnUZhzWeddxPkw5Q/exec";
+      "https://script.google.com/macros/s/AKfycbwo1J3260PlpU2_73lWGofIJXFP3_wRUPdiSMNMZNIaqxEzPVYrcwO6B0VPQZp_yOtG4A/exec";
 
     const form = document.forms["regist-form"];
     let buttonCounter = 0;
@@ -224,7 +224,7 @@ function IndonesiaOffline() {
                     id="LEADER_EMAIL"
                     name="LEADER_EMAIL"
                     class="form-control"
-                    placeholder="Input Your Leader Email Address"
+                    placeholder="Email Leader Tim"
                     required
                   />
                 </div>

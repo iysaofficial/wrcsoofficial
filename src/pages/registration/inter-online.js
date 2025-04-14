@@ -1,11 +1,9 @@
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
-import '../../css/Regist.css';
-
+import "../../css/Regist.css";
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 
 export default function InternationalOnline() {
   const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
@@ -17,7 +15,6 @@ export default function InternationalOnline() {
   const [statusMessage, setStatusMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate(); // React Router hook untuk navigasi
-
 
   const handleInputNameChange = (e) => {
     const { value } = e.target;
@@ -191,6 +188,12 @@ export default function InternationalOnline() {
                     </option>
                     <option value="Online Competition + Certificate and Medal">
                       Online Competition + Certificate and Medal
+                    </option>
+                    <option value="Online Competition + Certificate and Medal (SOUTH EAST ASIA)">
+                      Online Competition + Certificate and Medal (SOUTH EAST ASIA)
+                    </option>
+                    <option value="Online Competition + Certificate and Medal (Exclude EAST ASIA)">
+                      Online Competition + Certificate and Medal (Exclude EAST ASIA)
                     </option>
                   </select>
                 </div>
@@ -418,7 +421,9 @@ export default function InternationalOnline() {
 
               {/* DATA PEMBIMBING START */}
               {/* DATA PEMBIMBING START */}
-              <h1 className="text-sm md:text-lg lg:text-5xl">SUPERVISOR DATA</h1>
+              <h1 className="text-sm md:text-lg lg:text-5xl">
+                SUPERVISOR DATA
+              </h1>
               <h1 className="garis-bawah"></h1>
               <div className="user-details">
                 <div class="input-box">
@@ -471,7 +476,9 @@ export default function InternationalOnline() {
               {/* DETAIL PROJECT START */}
               {/* DETAIL PROJECT START */}
               <div className="">
-                <h1 className="text-sm md:text-lg lg:text-5xl">DETAIL PROJECT</h1>
+                <h1 className="text-sm md:text-lg lg:text-5xl">
+                  DETAIL PROJECT
+                </h1>
                 <h1 className="garis-bawah"></h1>
               </div>
               <div className="user-details">
@@ -504,17 +511,17 @@ export default function InternationalOnline() {
                     required
                     onChange={handleCategoryChange}
                   >
-                    <option value="">--Pilih Kategori--</option>
+                    <option value="">--Choose Category--</option>
                     <option value="Environment">Environment</option>
                     <option value="Robotics">Robotics</option>
-                    <option value="Games">
-                      Games
+                    <option value="Games">Games</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Physics and Engineering">
+                      Physics and Engineering
                     </option>
-                    <option value="Computer">
-                      Computer
+                    <option value="Design and Animation">
+                      Design and Animation
                     </option>
-                    <option value="Physics and Engineering">Physics and Engineering</option>
-                    <option value="Design and Animation">Design and Animation</option>
                     <option value="Life Sciences">Life Sciences</option>
                   </select>
                 </div>
@@ -572,7 +579,9 @@ export default function InternationalOnline() {
               {/* GENERAL INFORMATION START */}
               {/* GENERAL INFORMATION START */}
               <div className="">
-                <h1 className="text-sm md:text-lg lg:text-5xl">GENERAL INFORMATION</h1>
+                <h1 className="text-sm md:text-lg lg:text-5xl">
+                  GENERAL INFORMATION
+                </h1>
                 <h1 className="garis-bawah"></h1>
               </div>
               <div className="user-details">

@@ -48,12 +48,12 @@ const Category = () => {
             <h4 class="product-title">Design and Animation</h4>
           </div>
         </div>
-        <div class="product">
+        {/* <div class="product">
           <img src="./assets/images/logo/public.png" />
           <div class="product-info">
             <h4 class="product-title">Public</h4>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
