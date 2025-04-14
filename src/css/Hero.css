@@ -32,16 +32,18 @@
 
 .hero-section .hero-container h1{
     font-size: 3rem;
-    color: #ffa200 ;
-    background:rgba(135, 135, 135, 0.925);
+    color: #fefefe ;
+    background:rgba(116, 116, 116, 0.925); 
+    border-radius: 7px;
     display: inline-block;
 }   
 
 .hero-section .hero-container p{
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffa200;
-    background:rgba(135, 135, 135, 0.925);
+    color: #fefefe ;
+    background:rgba(116, 116, 116, 0.925); 
+    border-radius: 7px;
     display: inline-block;
     margin-bottom: 50px;
 }
@@ -54,7 +56,7 @@
     color: white;
     font-weight: 700;
     margin: 10px;
-    background: #ffa200;
+    background: #D4A328;
     padding: 1em 2.1em 1.1em;
     transition: 0.3s;
     cursor: pointer;
