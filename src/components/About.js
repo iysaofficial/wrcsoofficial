@@ -10,7 +10,7 @@ const About = () => {
               <div className="col-md-6 hero-content mt-auto mb-auto">
                 <h1 className="fw-bold">About WRCSO...</h1>
                 <div className="underline1 no-margin"></div>
-                {/* <div className="underline2 no-margin"></div> */}
+                
                 {/* <p className="">
               The Indonesian Young Scientist Association (IYSA) and
               Udayana University Jimbaran Bali, Indonesia, continue to
