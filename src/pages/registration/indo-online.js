@@ -36,23 +36,8 @@ function IndonesiaOnline() {
 
     // Logika untuk menentukan harga berdasarkan kategori yang dipilih
     switch (value) {
-      case "Social Science":
+      case "World Robotics & Computer Science Olympiad - Online Competition":
         setCategoryPrice("RP 950.000");
-        break;
-      case "Life Sciences":
-        setCategoryPrice("RP 950.000");
-        break;
-      case "Environmental Science":
-        setCategoryPrice("RP 950.000");
-        break;
-      case "Innovation Science":
-        setCategoryPrice("RP 950.000");
-        break;
-      case "Engineering":
-        setCategoryPrice("RP 950.000");
-        break;
-      case "Science in Islam":
-        setCategoryPrice("Rp 950.000");
         break;
       default:
         setCategoryPrice("");
@@ -71,7 +56,7 @@ function IndonesiaOnline() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbz-bcaaC60DfB2pibbL52s2IpHo7bPnIv73m_VDL3mDYahkI6cAjitb_M0fliySSB6o_g/exec";
+      "https://script.google.com/macros/s/AKfycbzsHAB_x7yj8-2RF4SlKc35XLajaBAIqp61xh7L93ORe-5UK0sF_uy90TUTNarDJSEI/exec";
 
     const form = document.forms["regist-form"];
     let buttonCounter = 0;
@@ -110,6 +95,8 @@ function IndonesiaOnline() {
       };
     }
   }, []);
+
+  
 
   return (
     <>
@@ -175,9 +162,10 @@ function IndonesiaOnline() {
                     class="form-control"
                     placeholder="Choose Category Competition "
                     required
+                    onChange={handleCategoryChange}
                   >
                     <option value="">--Pilih Kategori Kompetisi--</option>
-                    <option value="Online Competition">
+                    <option value="World Robotics & Computer Science Olympiad - Online Competition">
                       Online Competition
                     </option>
                   </select>
@@ -476,7 +464,6 @@ function IndonesiaOnline() {
                     name="CATEGORIES"
                     className="form-control"
                     required
-                    onChange={handleCategoryChange}
                   >
                    <option value="">--Pilih Kategori--</option>
                     <option value="Environment">Environment</option>

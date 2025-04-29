@@ -146,10 +146,10 @@ function IndonesiaOffline() {
                     required
                   >
                     <option value="">--Pilih Kategori Kompetisi--</option>
-                    <option value="Offline Competition">
+                    <option value="World Robotics & Computer Science Olympiad - Offline Competition">
                       Offline Competition
                     </option>
-                    <option value="Offline Competition + Excursion">
+                    <option value="World Robotics & Computer Science Olympiad - Offline Competition + Excursion">
                       Offline Competition + Excursion
                     </option>
                   </select>
@@ -545,7 +545,7 @@ function IndonesiaOffline() {
                     <option value="Pembimbing/Sekolah">
                       Pembimbing/Sekolah
                     </option>
-                    <option value="IYSA FaceBook">IYSA FaceBook</option>
+                    <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>
                     <option value="WRCSO Website">WRCSO Website</option>

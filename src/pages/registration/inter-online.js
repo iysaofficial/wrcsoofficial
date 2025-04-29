@@ -33,26 +33,16 @@ export default function InternationalOnline() {
   const handleCategoryChange = (e) => {
     const value = e.target.value;
     setSelectedCategory(value);
-
     // Logika untuk menentukan harga berdasarkan kategori yang dipilih
     switch (value) {
-      case "Social Science":
-        setCategoryPrice("75 USD");
+      case "World Robotics & Computer Science Olympiad - Online Competition":
+        setCategoryPrice("$75 USD");
         break;
-      case "Life Sciences":
-        setCategoryPrice("75 USD");
+      case "World Robotics & Computer Science Olympiad - Online Competition + Certificate and Medal (SOUTH EAST ASIA ONLY)":
+        setCategoryPrice("$200 USD");
         break;
-      case "Environmental Science":
-        setCategoryPrice("75 USD");
-        break;
-      case "Innovation Science":
-        setCategoryPrice("75 USD");
-        break;
-      case "Engineering":
-        setCategoryPrice("75 USD");
-        break;
-      case "Science in Islam":
-        setCategoryPrice("75 USD");
+      case "World Robotics & Computer Science Olympiad - Online Competition + Certificate and Medal (Exclude SOUTH EAST ASIA)":
+        setCategoryPrice("$250 USD");
         break;
       default:
         setCategoryPrice("");
@@ -71,7 +61,7 @@ export default function InternationalOnline() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyNKVsKtbp6tXhLSGJBQNpFdQ91crvoe122-XKOBdpPQ0vqtrokszHx4cIbnJP6uMfmsA/exec";
+      "https://script.google.com/macros/s/AKfycbyyaGZ_LJI6YufS53YJnKKMWf0SOu2hbE1sMaiVhyjLBGaSPIZ5pAFe4RS5uY7k5X_c/exec";
 
     const form = document.forms["regist-form"];
     let buttonCounter = 0;
@@ -117,7 +107,7 @@ export default function InternationalOnline() {
       <section className="registration-section">
         <div class="container">
           <div class="content">
-            <div class="sub">FORM REGISTRATION</div>
+            <div class="sub">REGISTRATION FORM</div>
             <h1 class="garis-bawah"></h1>
             <br />
             <br />
@@ -181,19 +171,19 @@ export default function InternationalOnline() {
                     class="form-control"
                     placeholder="Choose Category Competition "
                     required
+                    onChange={handleCategoryChange}
                   >
                     <option value="">--Choose Category Competition--</option>
-                    <option value="Online Competition">
+                    <option value="World Robotics & Computer Science Olympiad - Online Competition">
                       Online Competition
                     </option>
-                    <option value="Online Competition + Certificate and Medal">
-                      Online Competition + Certificate and Medal
+                    <option value="World Robotics & Computer Science Olympiad - Online Competition + Certificate and Medal (SOUTH EAST ASIA ONLY)">
+                      Online Competition + Certificate and Medal (SOUTH EAST
+                      ASIA)
                     </option>
-                    <option value="Online Competition + Certificate and Medal (SOUTH EAST ASIA)">
-                      Online Competition + Certificate and Medal (SOUTH EAST ASIA)
-                    </option>
-                    <option value="Online Competition + Certificate and Medal (Exclude EAST ASIA)">
-                      Online Competition + Certificate and Medal (Exclude EAST ASIA)
+                    <option value="World Robotics & Computer Science Olympiad - Online Competition + Certificate and Medal (Exclude SOUTH EAST ASIA)">
+                      Online Competition + Certificate and Medal (Exclude SOUTH
+                      EAST ASIA)
                     </option>
                   </select>
                 </div>
@@ -259,7 +249,6 @@ export default function InternationalOnline() {
                     required
                   >
                     <option value="">--Choose Phone Code--</option>
-                    <option value="Indonesia +62">Indonesia +62</option>
                     <option value="Afganistan +93">Afganistan +93</option>
                     <option value="Afrika Selatan +27">
                       Afrika Selatan +27
@@ -509,7 +498,6 @@ export default function InternationalOnline() {
                     name="CATEGORIES"
                     className="form-control"
                     required
-                    onChange={handleCategoryChange}
                   >
                     <option value="">--Choose Category--</option>
                     <option value="Environment">Environment</option>
@@ -625,7 +613,7 @@ export default function InternationalOnline() {
                     <option value="IYSA Instagram">IYSA Instagram</option>
                     <option value="WRCSO Instagram">WRCSO Instagram</option>
                     <option value="Supervisor/School">Supervisor/School</option>
-                    <option value="IYSA FaceBook">IYSA FaceBook</option>
+                    <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>
                     <option value="WRCSO Website">WRCSO Website</option>

@@ -136,7 +136,7 @@ export const internationalOfflineTerms = (
     </li>
     <li>
       - For offline participants who are entitled to the Best booth, Best
-      Poster, Best Presentation, Best Project, cash, semi grand award, and grand
+      Poster, Best Presentation, Best Project, cash prize, semi grand award, and grand
       award prizes but cannot attend the prize distribution ceremony, the prizes
       concerned will be declared forfeited.
     </li>

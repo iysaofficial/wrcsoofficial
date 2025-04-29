@@ -39,7 +39,7 @@ export default function InternationalOffline() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbwWxS7sZ5kyG4vQW7eAOYD5qOzNxuPlO5j4GnrtbAYiH5zwdreTUK_MnB5txQUTzYV3Yg/exec";
+      "https://script.google.com/macros/s/AKfycbzYe8Fi5kDjkUV-Qzd_NvvYy3Gyp0H3dHTYvrSVOeKVHoZAbpg3lg6NZkK6dn4LbgFg/exec";
 
     const form = document.forms["regist-form"];
     let buttonCounter = 0;
@@ -85,7 +85,7 @@ export default function InternationalOffline() {
       <section className="registration-section">
         <div class="container">
           <div class="content">
-            <div class="sub">FORM REGISTRATION</div>
+            <div class="sub">REGISTRATION FORM</div>
             <h1 class="garis-bawah"></h1>
             <br />
             <br />
@@ -151,17 +151,11 @@ export default function InternationalOffline() {
                     required
                   >
                     <option value="">--Choose Category Competition--</option>
-                    <option value="Offline Competition">
+                    <option value="World Robotics & Computer Science Olympiad - Offline Competition">
                       Offline Competition
                     </option>
-                    <option value="Offline Competition + Full Package">
+                    <option value="World Robotics & Computer Science Olympiad - Offline Competition + Full Package">
                       Offline Competition + Full Package
-                    </option>
-                    <option value="Online Competition + Certificate and Medal (SOUTH EAST ASIA)">
-                      Online Competition + Certificate and Medal (SOUTH EAST ASIA)
-                    </option>
-                    <option value="Online Competition + Certificate and Medal (Exclude EAST ASIA)">
-                      Online Competition + Certificate and Medal (Exclude EAST ASIA)
                     </option>
                   </select>
                 </div>
@@ -227,7 +221,6 @@ export default function InternationalOffline() {
                     required
                   >
                     <option value="">--Choose Phone Code--</option>
-                    <option value="Indonesia +62">Indonesia +62</option>
                     <option value="Afganistan +93">Afganistan +93</option>
                     <option value="Afrika Selatan +27">
                       Afrika Selatan +27
@@ -577,7 +570,7 @@ export default function InternationalOffline() {
                     <option value="IYSA Instagram">IYSA Instagram</option>
                     <option value="WRCSO Instagram">WRCSO Instagram</option>
                     <option value="Supervisor/School">Supervisor/School</option>
-                    <option value="IYSA FaceBook">IYSA FaceBook</option>
+                    <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>
                     <option value="WRCSO Website">WRCSO Website</option>
