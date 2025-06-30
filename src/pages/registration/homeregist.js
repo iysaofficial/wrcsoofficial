@@ -20,11 +20,11 @@ function HomeRegist() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <a href="/homeindo" className="btn btn-action text-center me-lg-5">
+            <a className="btn btn-action text-center me-lg-5">
               Indonesia Participant{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a>
-            <a href="/homeinter" className="btn btn-action text-center me-lg-5">
+            <a className="btn btn-action text-center me-lg-5">
               International Participant{" "}
               <i className="fa-solid fa-earth-americas"></i>
             </a>

@@ -40,7 +40,7 @@ function IndonesiaOffline() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbwo1J3260PlpU2_73lWGofIJXFP3_wRUPdiSMNMZNIaqxEzPVYrcwO6B0VPQZp_yOtG4A/exec";
+      "";
 
     const form = document.forms["regist-form"];
     let buttonCounter = 0;
@@ -60,7 +60,7 @@ function IndonesiaOffline() {
               setStatusMessage("Data berhasil dikirim!");
               form.reset(); // Reset form hanya jika pengiriman sukses
               setTimeout(() => {
-                window.location.href = "/thankyouindo"; // Redirect setelah 1 detik
+                window.location.href = ""; // Redirect setelah 1 detik
               }, 1000);
             } else {
               setStatusMessage("Terjadi kesalahan saat mengirim data.");
@@ -573,9 +573,9 @@ function IndonesiaOffline() {
               {/* GENERAL INFORMATION END */}
               {/* GENERAL INFORMATION END */}
 
-              <div className="button">
+              {/* <div className="button">
                 <input type="submit" value="KIRIM" />
-              </div>
+              </div> */}
             </form>
             {/* Loader dan Status Message */}
             {isLoading && (

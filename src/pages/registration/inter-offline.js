@@ -39,7 +39,7 @@ export default function InternationalOffline() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzYe8Fi5kDjkUV-Qzd_NvvYy3Gyp0H3dHTYvrSVOeKVHoZAbpg3lg6NZkK6dn4LbgFg/exec";
+      "";
 
     const form = document.forms["regist-form"];
     let buttonCounter = 0;
@@ -59,7 +59,7 @@ export default function InternationalOffline() {
               setStatusMessage("Data berhasil dikirim!");
               form.reset(); // Reset form hanya jika pengiriman sukses
               setTimeout(() => {
-                window.location.href = "/thankyouinter"; // Redirect setelah 1 detik
+                window.location.href = ""; // Redirect setelah 1 detik
               }, 1000);
             } else {
               setStatusMessage("Terjadi kesalahan saat mengirim data.");
@@ -567,13 +567,13 @@ export default function InternationalOffline() {
                     <option value="">
                       --Select the Source of Information--
                     </option>
+                    <option value="WRCSO Website">WRCSO Website</option>
+                    <option value="IYSA Website">IYSA Website</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
                     <option value="WRCSO Instagram">WRCSO Instagram</option>
                     <option value="Supervisor/School">Supervisor/School</option>
                     <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
-                    <option value="IYSA Website">IYSA Website</option>
-                    <option value="WRCSO Website">WRCSO Website</option>
                     <option value="IYSA Email">IYSA Email</option>
                     <option value="WRCSO Email">WRCSO Email</option>
                     <option value="Previous Event">Previous Event</option>
@@ -581,9 +581,9 @@ export default function InternationalOffline() {
                   </select>
                 </div>
               </div>
-              <div class="button">
+              {/* <div class="button">
                 <input type="submit" value="SUBMIT FORM" />
-              </div>
+              </div> */}
             </form>
 
             {/* Loader dan Status Message */}

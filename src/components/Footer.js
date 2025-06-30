@@ -48,11 +48,6 @@ function Footer() {
                         <i className="fab fa-question me-1 fw-bold"></i>FAQ
                       </a>
                     </li>
-                    <li>
-                      <a href="/" className="py-1 d-block fw-bold">
-                        <i className="fa fa-house me-1"></i>Our Main Website
-                      </a>
-                    </li>
                   </ul>
                 </div>
                 <div className="col-md-4 mb-md-0 mb-4 border-left">
