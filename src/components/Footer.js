@@ -36,7 +36,6 @@ function Footer() {
                 <div className="col-md-4 mb-md-0 mb-4 border-left">
                   <h2 className="footer-heading fw-bold">Information Link</h2>
                   <ul className="list-unstyled">
-                    {/* <li><a href="#" className="py-1 d-block"><i className="fa fa-registered me-1"></i>Registration Link</a></li> */}
                     <li>
                       <a href="/Contacts" className="py-1 d-block fw-bold">
                         <i className="fa fa-address-book me-1 fw-bold"></i>
@@ -58,6 +57,7 @@ function Footer() {
                         href="https://maps.app.goo.gl/gsy66ofvoqiWU7797"
                         className="py-1 d-block fw-bold"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         {" "}
                         <i className="fa fa-map-marker me-1"></i> Kampus I Jl.
@@ -67,6 +67,7 @@ function Footer() {
                         href="https://maps.app.goo.gl/yQsAWn6iLZmtft7A8"
                         className="py-1 d-block fw-bold"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         {" "}
                         <i className="fa fa-map-marker me-1"></i> Kampus II Jl.
@@ -88,6 +89,7 @@ function Footer() {
                       <a
                         href="mailto:wso.iysa@gmail.com"
                         target="_blank"
+                        rel="noreferrer"
                         className="py-1 d-block fw-bold"
                       >
                         <i className="fa fa-envelope me-1"></i>
@@ -103,6 +105,7 @@ function Footer() {
                       <a
                         href="https://www.facebook.com/unikombandungofficial"
                         target="_blank"
+                        rel="noreferrer"
                         className="py-1 d-block fw-bold"
                       >
                         <i className=" fab fa-facebook-f me-1"></i>Facebook
@@ -112,6 +115,7 @@ function Footer() {
                       <a
                         href="https://x.com/unikomtwit"
                         target="_blank"
+                        rel="noreferrer"
                         className="py-1 d-block fw-bold"
                       >
                         <i className="fa-brands fa-twitter me-1"></i>Twitter
@@ -121,6 +125,7 @@ function Footer() {
                       <a
                         href="https://www.instagram.com/unikom_official/"
                         target="_blank"
+                        rel="noreferrer"
                         className="py-1 d-block fw-bold"
                       >
                         <i className="fab fa-instagram me-1"></i>Instagram
@@ -130,6 +135,7 @@ function Footer() {
                       <a
                         href="https://www.youtube.com/channel/UCXqRMoxTLDsAQeEqVGBTgKw"
                         target="_blank"
+                        rel="noreferrer"
                         className="py-1 d-block fw-bold"
                       >
                         <i className="fab fa-youtube me-1"></i>Youtube
@@ -139,6 +145,7 @@ function Footer() {
                       <a
                         href="https://line.me/R/ti/p/%40akg4621f"
                         target="_blank"
+                        rel="noreferrer"
                         className="py-1 d-block fw-bold"
                       >
                         <i className="fa-brands fa-line me-1"></i>Line
