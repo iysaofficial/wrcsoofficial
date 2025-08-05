@@ -12,7 +12,7 @@ const Hero = () =>{
                  <br />
                 <a href="https://drive.google.com/file/d/17BRH044yxVmwSZD-otAJX1TUvbMI9F5W/view?usp=sharing" target="_blank" className="registration-button fw-bold">Guide Book</a>
                 {/* <a href="/homeregist" className="registration-button fw-bold">Registration</a> */}
-                <a className="registration-button fw-bold">Close Registration</a>
+                <a className="registration-button fw-bold">Coming Soon</a>
             </div>
         </section>
         </> 

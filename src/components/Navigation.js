@@ -54,18 +54,19 @@ const Navigation = () => {
               <a
                 href="https://drive.google.com/file/d/17BRH044yxVmwSZD-otAJX1TUvbMI9F5W/view?usp=sharing"
                 target="_blank"
+                rel="noreferrer"
               >
                 Guide Book
               </a>
             </li>
             {/* <li className='menu-item'><a href="#contact">Kontak</a></li> */}
             {/* <li className='menu-item'><a href="https://drive.google.com/drive/folders/1l_bCazIZmdtOSUjAuBAgXTg7YEBTixPY" target='_blank'>Certificate Supervisor</a></li> */}
-            {/* <li className='menu-item'>
+            <li className='menu-item fw-bold'>
                         <a className='sub-btn' href="#">Media Coverage <i className='fas fa-angle-down'></i></a>
                         <ul className='sub-menu'>
-                            <li className='sub-item'><a href="https://drive.google.com/file/d/16x4XVuEVbvPVqlVdl5FG1t-R_OnBLOJM/view?usp=sharing" target='_blank'>Press Release 2024</a></li>
+                            <li className='sub-item'><a href="https://drive.google.com/file/d/14L1ZDr-XXu60TcuA9GzhmA3YhCZgfXRu/view?usp=sharing" target='_blank'>Press Release 2025</a></li>
                         </ul>
-                    </li> */}
+                    </li>
             {/* <li className='menu-item'>
                         <a className='sub-btn' href="#">List of Winner <i className='fas fa-angle-down'></i></a>
                         <ul className='sub-menu'>
@@ -73,7 +74,7 @@ const Navigation = () => {
                         </ul>
                     </li> */}
             <li className="menu-item fw-bold">
-              <a className="sub-btn" href="#">
+              <a className="sub-btn">
                 Certificate Supervisor <i className="fas fa-angle-down"></i>
               </a>
               <ul className="sub-menu">
@@ -83,17 +84,27 @@ const Navigation = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Sertifikat Supervisor 2025
+                    Certificate Supervisor 2025
                   </a>
                 </li>
               </ul>
             </li>
-            {/* <li className='menu-item'>
-                        <a className='sub-btn' href="#">Gallery <i className='fas fa-angle-down'></i></a>
-                        <ul className='sub-menu'>
-                            <li className='sub-item'><a href="https://drive.google.com/drive/u/0/folders/1hGdRrLTdK1QvfM_S5b9abJ64Ok8JahVE" target='_blank'>2024</a></li>
-                        </ul>
-                    </li> */}
+            <li className="menu-item fw-bold">
+              <a className="sub-btn">
+                Gallery <i className="fas fa-angle-down"></i>
+              </a>
+              <ul className="sub-menu">
+                <li className="sub-item">
+                  <a
+                    href="https://drive.google.com/drive/folders/1AdSruq7PSFTTBioDxy4C9FOq873ntIwj?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    2025
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li className="menu-item fw-bold">
               <a href="/Faqs">Faq</a>
             </li>
