@@ -48,25 +48,25 @@ const Navigation = () => {
               <a href="/">Home</a>
             </li>
             <li className="menu-item fw-bold">
-              <a href="/#About">About</a>
-            </li>
-            <li className="menu-item fw-bold">
-              <a
-                href="https://drive.google.com/file/d/17BRH044yxVmwSZD-otAJX1TUvbMI9F5W/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Guide Book
-              </a>
+              <a href="/listofwinner">List of Winners</a>
             </li>
             {/* <li className='menu-item'><a href="#contact">Kontak</a></li> */}
             {/* <li className='menu-item'><a href="https://drive.google.com/drive/folders/1l_bCazIZmdtOSUjAuBAgXTg7YEBTixPY" target='_blank'>Certificate Supervisor</a></li> */}
-            <li className='menu-item fw-bold'>
-                        <a className='sub-btn' href="#">Media Coverage <i className='fas fa-angle-down'></i></a>
-                        <ul className='sub-menu'>
-                            <li className='sub-item'><a href="https://drive.google.com/file/d/14L1ZDr-XXu60TcuA9GzhmA3YhCZgfXRu/view?usp=sharing" target='_blank'>Press Release 2025</a></li>
-                        </ul>
-                    </li>
+            <li className="menu-item fw-bold">
+              <a className="sub-btn" href="#">
+                Media Coverage <i className="fas fa-angle-down"></i>
+              </a>
+              <ul className="sub-menu">
+                <li className="sub-item">
+                  <a
+                    href="https://drive.google.com/file/d/14L1ZDr-XXu60TcuA9GzhmA3YhCZgfXRu/view?usp=sharing"
+                    target="_blank"
+                  >
+                    Press Release 2025
+                  </a>
+                </li>
+              </ul>
+            </li>
             {/* <li className='menu-item'>
                         <a className='sub-btn' href="#">List of Winner <i className='fas fa-angle-down'></i></a>
                         <ul className='sub-menu'>
