@@ -14,22 +14,15 @@ const Kategori25 = () => {
           <div className="hero-btn text-center">
             <a
               className="btn m-2"
-              href="https://drive.google.com/file/d/1lsZt8Db3qRWIUnh-puCs0SMcm9Z0EWyO/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
+              href="jenjangonl25"
             >
-              SPECIAL AWARD ONLINE
+              ONLINE PARTICIPANTS
             </a>
-            {/*             <a className="btn m-2" href="/jenjangonl25">
-              YISF ONLINE
-            </a> */}
             <a
               className="btn m-2"
-              href="https://drive.google.com/file/d/1TNx_XfX91CgyZWmrmRkqjW9oUZvQlkzt/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
+              href="jenjangofl25"
             >
-              SPECIAL AWARD OFFLINE
+              OFFLINE PARTICIPANTS
             </a>
             {/*             <a className="btn m-2" href="/jenjangofl25">
               YISF OFFLINE

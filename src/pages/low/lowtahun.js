@@ -15,9 +15,7 @@ const Lowtahun = () => {
           <div className="hero-btn text-center">
             <a
               className="btn m-2"
-              href="https://drive.google.com/drive/folders/16VcOLDCeLg8fRXTGqBaRpMYpZRGwUXft?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
+              href="/kategori25"
             >
               2025
             </a>
