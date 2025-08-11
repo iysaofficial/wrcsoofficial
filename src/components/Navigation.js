@@ -67,6 +67,21 @@ const Navigation = () => {
                 </li>
               </ul>
             </li>
+            <li className="menu-item fw-bold">
+              <a className="sub-btn" href="#">
+                Curation <i className="fas fa-angle-down"></i>
+              </a>
+              <ul className="sub-menu">
+                <li className="sub-item">
+                  <a
+                    href="https://drive.google.com/drive/folders/1vzjkpg5T_ecjvgeI5Z6kN_bfRbYLxBYl?usp=sharing"
+                    target="_blank"
+                  >
+                    Curation 2025
+                  </a>
+                </li>
+              </ul>
+            </li>
             {/* <li className='menu-item'>
                         <a className='sub-btn' href="#">List of Winner <i className='fas fa-angle-down'></i></a>
                         <ul className='sub-menu'>
