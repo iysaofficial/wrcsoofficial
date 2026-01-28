@@ -53,30 +53,32 @@ const Navigation = () => {
             {/* <li className='menu-item'><a href="#contact">Kontak</a></li> */}
             {/* <li className='menu-item'><a href="https://drive.google.com/drive/folders/1l_bCazIZmdtOSUjAuBAgXTg7YEBTixPY" target='_blank'>Certificate Supervisor</a></li> */}
             <li className="menu-item fw-bold">
-              <a className="sub-btn" href="#">
+              <div className="sub-btn">
                 Media Coverage <i className="fas fa-angle-down"></i>
-              </a>
+                               </div>
               <ul className="sub-menu">
                 <li className="sub-item">
                   <a
-                    href="https://drive.google.com/file/d/14L1ZDr-XXu60TcuA9GzhmA3YhCZgfXRu/view?usp=sharing"
-                    target="_blank"
-                  >
+                                      href="https://drive.google.com/file/d/14L1ZDr-XXu60TcuA9GzhmA3YhCZgfXRu/view?usp=sharing"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                    >
                     Press Release 2025
                   </a>
                 </li>
               </ul>
             </li>
             <li className="menu-item fw-bold">
-              <a className="sub-btn" href="#">
+              <div className="sub-btn">
                 Curation <i className="fas fa-angle-down"></i>
-              </a>
+                               </div>
               <ul className="sub-menu">
                 <li className="sub-item">
                   <a
-                    href="https://drive.google.com/drive/folders/1vzjkpg5T_ecjvgeI5Z6kN_bfRbYLxBYl?usp=sharing"
-                    target="_blank"
-                  >
+                                      href="https://drive.google.com/drive/folders/1vzjkpg5T_ecjvgeI5Z6kN_bfRbYLxBYl?usp=sharing"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                    >
                     Curation 2025
                   </a>
                 </li>
@@ -89,9 +91,9 @@ const Navigation = () => {
                         </ul>
                     </li> */}
             <li className="menu-item fw-bold">
-              <a className="sub-btn">
+              <div className="sub-btn">
                 Certificate Supervisor <i className="fas fa-angle-down"></i>
-              </a>
+                               </div>
               <ul className="sub-menu">
                 <li className="sub-item">
                   <a
@@ -105,9 +107,9 @@ const Navigation = () => {
               </ul>
             </li>
             <li className="menu-item fw-bold">
-              <a className="sub-btn">
+              <div className="sub-btn">
                 Gallery <i className="fas fa-angle-down"></i>
-              </a>
+                               </div>
               <ul className="sub-menu">
                 <li className="sub-item">
                   <a

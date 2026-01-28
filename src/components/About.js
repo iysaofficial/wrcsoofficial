@@ -47,9 +47,10 @@ const About = () => {
               </div>
               <div className="col-md-6  hero-image text-center">
                 <img
-                  src="./assets/images/logo/WRCSO.png"
-                  className="img-fluid"
-                ></img>
+                                  src="./assets/images/logo/WRCSO.png"
+                                  className="img-fluid"
+                                  alt="WRCSO Logo"
+                                ></img>
               </div>
             </div>
           </div>

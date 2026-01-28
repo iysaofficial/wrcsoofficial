@@ -49,19 +49,19 @@ function HomeInter() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <a
-              onClick={() => handleOpenModal("/interonline", internationalOnlineTerms)}
-              className="btn btn-action text-center me-lg-5"
-            >
-              Online Competition <i className="fa-solid fa-earth-americas"></i>
-            </a>
-            <a
-              onClick={() => handleOpenModal("/interoffline", internationalOfflineTerms)}
-              className="btn btn-action text-center me-lg-5"
-            >
-              Offline Competition{" "}
-              <i className="fa-solid fa-earth-americas"></i>
-            </a>
+            <div
+                          onClick={() => handleOpenModal("/interonline", internationalOnlineTerms)}
+                          className="btn btn-action text-center me-lg-5"
+                        >
+                          Online Competition <i className="fa-solid fa-earth-americas"></i>
+                        </div>
+            <div
+                          onClick={() => handleOpenModal("/interoffline", internationalOfflineTerms)}
+                          className="btn btn-action text-center me-lg-5"
+                        >
+                          Offline Competition{" "}
+                          <i className="fa-solid fa-earth-americas"></i>
+                        </div>
           </div>
         </div>
       </section>

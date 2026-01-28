@@ -144,7 +144,7 @@ function IndonesiaOffline() {
         <div class="container">
           <div class="content">
             <div class="sub">REGISTRATION FORM</div>
-            <h1 class="garis-bawah"></h1>
+            <h1 class="garis-bawah">&nbsp;</h1>
             <br />
             <br />
             <h4 className='text-xl'>
@@ -206,7 +206,7 @@ function IndonesiaOffline() {
 
             <form name="regist-form">
               <h1 className='text-sm md:text-lg lg:text-5xl'>BIODATA</h1>
-              <h1 className="garis-bawah"></h1>
+              <h1 className="garis-bawah">&nbsp;</h1>
               <div className="user-details">
                 <div className="input-box">
                   <label className="form-label" value="Indonesian Participants">
@@ -344,7 +344,7 @@ function IndonesiaOffline() {
 
               {/* SCHOOL DATA START */}
               <h1 className='text-sm md:text-lg lg:text-5xl'>SCHOOL DATA</h1>
-              <h1 className="garis-bawah"></h1>
+              <h1 className="garis-bawah">&nbsp;</h1>
               <div className="user-details">
                 <div className="input-box">
                   <label htmlFor="NAMA_SEKOLAH" className="form-label">
@@ -434,7 +434,7 @@ function IndonesiaOffline() {
 
               {/* SUPERVISOR DATA START */}
               <h1 className='text-sm md:text-lg lg:text-5xl'>SUPERVISOR DATA</h1>
-              <h1 className="garis-bawah"></h1>
+              <h1 className="garis-bawah">&nbsp;</h1>
               <div className="user-details">
                 <div class="input-box">
                   <label for="NAME_SUPERVISOR" class="form-label">
@@ -492,7 +492,7 @@ function IndonesiaOffline() {
               {/* PROJECT DETAILS START */}
               <div className="">
                 <h1 className='text-sm md:text-lg lg:text-5xl'>PROJECT DETAILS</h1>
-                <h1 className="garis-bawah"></h1>
+                <h1 className="garis-bawah">&nbsp;</h1>
               </div>
               <div className="user-details">
                 <div className="input-box">
@@ -589,7 +589,7 @@ function IndonesiaOffline() {
               {/* GENERAL INFORMATION START */}
               <div className="">
                 <h1 className='text-sm md:text-lg lg:text-5xl'>GENERAL INFORMATION</h1>
-                <h1 className="garis-bawah"></h1>
+                <h1 className="garis-bawah">&nbsp;</h1>
               </div>
               <div className="user-details">
                 <div className="input-box">
