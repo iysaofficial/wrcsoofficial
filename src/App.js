@@ -20,6 +20,7 @@ import Lowtahun from "./pages/low/lowtahun";
 import Kategori25 from "./pages/low/2025/kategori25";
 import Jenjangofl25 from "./pages/low/2025/jenjangofl25";
 import Jenjangonl25 from "./pages/low/2025/jenjangonl25";
+import ThankyouPage from "./pages/registration/thankyou";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/homeinter" element={<HomeInter/>} />
             <Route path="/interoffline" element={<InternationalOffline/>} />
             <Route path="/interonline" element={<InternationalOnline/>} />
+            <Route path="/thankyou" element={<ThankyouPage/>} />
             <Route path="/listofwinner" element={<Lowtahun/>} />
             <Route path="/kategori25" element={<Kategori25 />} />
             <Route path="/jenjangofl25" element={<Jenjangofl25 />} />

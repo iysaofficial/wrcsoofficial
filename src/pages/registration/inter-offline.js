@@ -9,9 +9,15 @@ export default function InternationalOffline() {
   const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
   const maxNameChars = 180; // batasan maksimal karakter
   const [selectedMaxProject, setselectedMaxProject] = useState("");
+  const [selectedNamaSekolah, setselectedNamaSekolah] = useState("");
+  const maxSchoolChars = 500; // maximum character limit
   const maxProjectChars = 160; // batasan maksimal karakter
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const [canClick, setCanClick] = useState(false);
   const navigate = useNavigate(); // React Router hook untuk navigasi
 
   const handleInputNameChange = (e) => {
@@ -21,10 +27,32 @@ export default function InternationalOffline() {
     }
   };
 
+  const handleInputNameSchoolChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= maxSchoolChars) {
+      setselectedNamaSekolah(value);
+    }
+  };
+
   const handleInputProjectChange = (e) => {
     const { value } = e.target;
     if (value.length <= maxProjectChars) {
       setselectedMaxProject(value);
+    }
+  };
+
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setSelectedCategory(value);
+
+    // Logic to determine the price based on the selected category
+    switch (value) {
+      case "World Robotics & Computer Science Olympiad - Offline Competition":
+        break;
+      case "World Robotics & Computer Science Olympiad - Offline Competition + Excursion":
+        break;
+      default:
+        break;
     }
   };
 
@@ -37,47 +65,77 @@ export default function InternationalOffline() {
     }
   }, [navigate]);
 
-  useEffect(() => {
-    const scriptURL =
-      "";
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbwreaO9HgkN7veGjkTxwRKi1ETnSeybtpfNaxHSl3R-08qRY0MbtkbzgbgROcnJEKNt/exec";
 
+  useEffect(() => {
     const form = document.forms["regist-form"];
-    let buttonCounter = 0;
 
     if (form) {
       const handleSubmit = async (e) => {
+        
         e.preventDefault();
-        if (buttonCounter === 0) {
-          buttonCounter++; // Cegah klik ganda
-          setIsLoading(true); // Tampilkan loader
-          try {
-            const response = await fetch(scriptURL, {
-              method: "POST",
-              body: new FormData(form),
-            });
-            if (response.ok) {
-              setStatusMessage("Data berhasil dikirim!");
-              form.reset(); // Reset form hanya jika pengiriman sukses
-              setTimeout(() => {
-                window.location.href = ""; // Redirect setelah 1 detik
-              }, 1000);
-            } else {
-              setStatusMessage("Terjadi kesalahan saat mengirim data.");
-            }
-          } catch (error) {
-            setStatusMessage("Terjadi kesalahan saat mengirim data.");
-          } finally {
-            setIsLoading(false); // Sembunyikan loader
-            buttonCounter = 0; // Reset counter untuk klik selanjutnya
+        setShowModal(true);
+        setCanClick(false);
+        setCountdown(5); // Reset countdown when modal appears
+
+        let count = 5;
+        const interval = setInterval(() => {
+          count -= 1;
+          setCountdown(count);
+
+          if (count <= 1) {
+            clearInterval(interval); // Stop the countdown at 1
+            setCanClick(true);
           }
-        }
+        }, 1000);
       };
+
       form.addEventListener("submit", handleSubmit);
       return () => {
         form.removeEventListener("submit", handleSubmit);
       };
     }
   }, []);
+
+  const handleConfirmSubmit = async () => {
+    setShowModal(false); // Close modal
+    const form = document.forms["regist-form"];
+    console.log(new FormData(form));
+
+    if (!form) return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        setStatusMessage("Data sent successfully!");
+
+        // Get data before reset
+        const formData = {
+          namaLengkap: selectedMaxNamaLengkap,
+          projectTitle: selectedMaxProject,
+          category: selectedCategory,
+          namasekolah: selectedNamaSekolah,
+        };
+
+        form.reset();
+        setTimeout(() => {
+          navigate("/thankyou", { state: formData });
+        }, 1000);
+      } else {
+        setStatusMessage("An error occurred while sending data.");
+      }
+    } catch (error) {
+      setStatusMessage("An error occurred while sending data.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -116,6 +174,38 @@ export default function InternationalOffline() {
             <br></br>
             <br></br>
 
+            {showModal && (
+              <div className="modal-overlay-submit">
+                <div className="modal-submit text-lg-center text-md-center">
+                  <h2 className="text-center">⚠️ATTENTION!</h2>
+                  <p>
+                    Data that has been sent cannot be changed. The committee
+                    will use the last data entered for printing the
+                    certificate.
+                    <br />
+                    <b>MAKE SURE ALL DATA IS CORRECT!</b>
+                    <br />
+                    <b>
+                      DO NOT RE-REGISTER WITH THE SAME DATA REPEATEDLY!
+                    </b>
+                  </p>
+                  <div className="modal-buttons-submit">
+                    <button onClick={() => setShowModal(false)}>Back</button>
+                    <button
+                      onClick={handleConfirmSubmit}
+                      disabled={!canClick || isLoading}
+                    >
+                      {isLoading
+                        ? "Submitting..."
+                        : canClick
+                        ? "Continue"
+                        : `Please wait... ${countdown}`}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <form name="regist-form">
               <h1 className="text-sm md:text-lg lg:text-5xl">BIODATA</h1>
               <h1 className="garis-bawah"></h1>
@@ -148,6 +238,7 @@ export default function InternationalOffline() {
                     name="CATEGORY_COMPETITION"
                     class="form-control"
                     placeholder="Choose Category Competition "
+                    onChange={handleCategoryChange}
                     required
                   >
                     <option value="">--Choose Category Competition--</option>
@@ -337,6 +428,8 @@ export default function InternationalOffline() {
                     class="form-control"
                     placeholder="Input School Name of Leader & Member Team"
                     required
+                    value={selectedNamaSekolah}
+                    onChange={handleInputNameSchoolChange}
                   ></textarea>
                 </div>
               </div>
@@ -581,9 +674,9 @@ export default function InternationalOffline() {
                   </select>
                 </div>
               </div>
-              {/* <div class="button">
+              <div class="button">
                 <input type="submit" value="SUBMIT FORM" />
-              </div> */}
+              </div>
             </form>
 
             {/* Loader dan Status Message */}

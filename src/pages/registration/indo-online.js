@@ -9,17 +9,29 @@ function IndonesiaOnline() {
   const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
   const maxNameChars = 180; // batasan maksimal karakter
   const [selectedMaxProject, setselectedMaxProject] = useState("");
+  const [selectedNamaSekolah, setselectedNamaSekolah] = useState("");
+  const maxSchoolChars = 500; // maximum character limit
   const maxProjectChars = 160; // batasan maksimal karakter
   const [selectedCategory, setSelectedCategory] = useState("");
   const [categoryPrice, setCategoryPrice] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const [canClick, setCanClick] = useState(false);
   const navigate = useNavigate(); // React Router hook untuk navigasi
 
   const handleInputNameChange = (e) => {
     const { value } = e.target;
     if (value.length <= maxNameChars) {
       setselectedMaxNamaLengkap(value);
+    }
+  };
+
+  const handleInputNameSchoolChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= maxSchoolChars) {
+      setselectedNamaSekolah(value);
     }
   };
 
@@ -37,7 +49,7 @@ function IndonesiaOnline() {
     // Logika untuk menentukan harga berdasarkan kategori yang dipilih
     switch (value) {
       case "World Robotics & Computer Science Olympiad - Online Competition":
-        setCategoryPrice("RP 950.000");
+        setCategoryPrice("RP 1.150.000");
         break;
       default:
         setCategoryPrice("");
@@ -54,41 +66,32 @@ function IndonesiaOnline() {
     }
   }, [navigate]);
 
-  useEffect(() => {
-    const scriptURL =
-      "";
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxmWTLb4xc1_TudRHPLd-I9OhE-pdu5OOi43txOvzwDQpDTInie4bUn3xKr_s01B9E/exec";
 
+  useEffect(() => {
     const form = document.forms["regist-form"];
-    let buttonCounter = 0;
 
     if (form) {
       const handleSubmit = async (e) => {
+        
         e.preventDefault();
-        if (buttonCounter === 0) {
-          buttonCounter++; // Cegah klik ganda
-          setIsLoading(true); // Tampilkan loader
-          try {
-            const response = await fetch(scriptURL, {
-              method: "POST",
-              body: new FormData(form),
-            });
-            if (response.ok) {
-              setStatusMessage("Data berhasil dikirim!");
-              form.reset(); // Reset form hanya jika pengiriman sukses
-              setTimeout(() => {
-                window.location.href = ""; // Redirect setelah 1 detik
-              }, 1000);
-            } else {
-              setStatusMessage("Terjadi kesalahan saat mengirim data.");
-            }
-          } catch (error) {
-            setStatusMessage("Terjadi kesalahan saat mengirim data.");
-          } finally {
-            setIsLoading(false); // Sembunyikan loader
-            buttonCounter = 0; // Reset counter untuk klik selanjutnya
+        setShowModal(true);
+        setCanClick(false);
+        setCountdown(5); // Reset countdown when modal appears
+
+        let count = 5;
+        const interval = setInterval(() => {
+          count -= 1;
+          setCountdown(count);
+
+          if (count <= 1) {
+            clearInterval(interval); // Stop the countdown at 1
+            setCanClick(true);
           }
-        }
+        }, 1000);
       };
+
       form.addEventListener("submit", handleSubmit);
       return () => {
         form.removeEventListener("submit", handleSubmit);
@@ -96,7 +99,45 @@ function IndonesiaOnline() {
     }
   }, []);
 
-  
+  const handleConfirmSubmit = async () => {
+    setShowModal(false); // Close modal
+    const form = document.forms["regist-form"];
+    console.log(new FormData(form));
+
+    if (!form) return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        setStatusMessage("Data sent successfully!");
+
+        // Get data before reset
+        const formData = {
+          namaLengkap: selectedMaxNamaLengkap,
+          projectTitle: selectedMaxProject,
+          category: selectedCategory,
+          categoryPrice: categoryPrice,
+          namasekolah: selectedNamaSekolah,
+        };
+
+        form.reset();
+        setTimeout(() => {
+          navigate("/thankyou", { state: formData });
+        }, 1000);
+      } else {
+        setStatusMessage("An error occurred while sending data.");
+      }
+    } catch (error) {
+      setStatusMessage("An error occurred while sending data.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -132,6 +173,38 @@ function IndonesiaOnline() {
               alamat email team leader.
             </p>
             <br />
+
+            {showModal && (
+              <div className="modal-overlay-submit">
+                <div className="modal-submit text-lg-center text-md-center">
+                  <h2 className="text-center">⚠️ATTENTION!</h2>
+                  <p>
+                    Data that has been sent cannot be changed. The committee
+                    will use the last data entered for printing the
+                    certificate.
+                    <br />
+                    <b>MAKE SURE ALL DATA IS CORRECT!</b>
+                    <br />
+                    <b>
+                      DO NOT RE-REGISTER WITH THE SAME DATA REPEATEDLY!
+                    </b>
+                  </p>
+                  <div className="modal-buttons-submit">
+                    <button onClick={() => setShowModal(false)}>Back</button>
+                    <button
+                      onClick={handleConfirmSubmit}
+                      disabled={!canClick || isLoading}
+                    >
+                      {isLoading
+                        ? "Submitting..."
+                        : canClick
+                        ? "Continue"
+                        : `Please wait... ${countdown}`}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             <form name="regist-form">
               <h1 className="text-sm md:text-lg lg:text-5xl">BIODATA</h1>
@@ -294,6 +367,8 @@ function IndonesiaOnline() {
                     className="form-control"
                     placeholder="Masukan Nama Sekolah/Universitas Anda"
                     required
+                    value={selectedNamaSekolah}
+                    onChange={handleInputNameSchoolChange}
                   ></textarea>
                 </div>
                 <div className="input-box">
@@ -607,11 +682,10 @@ function IndonesiaOnline() {
                 </div>
               </div>
               {/* GENERAL INFORMATION END */}
-              {/* GENERAL INFORMATION END */}
 
-              {/* <div className="button">
+              <div className="button">
                 <input type="submit" value="KIRIM" />
-              </div> */}
+              </div>
             </form>
 
             {/* Loader dan Status Message */}
