@@ -148,7 +148,7 @@ export default function InternationalOffline() {
             <br />
             <br />
             <h4>
-              HELLO WRCSO 2025 PARTICIPANTS, Please consider the following
+              HELLO WRCSO 2026 PARTICIPANTS, Please consider the following
               information before filling out the registration form :
             </h4>
             <br />
@@ -647,7 +647,7 @@ export default function InternationalOffline() {
 
                 <div class="input-box">
                   <label for="INFORMATION_RESOURCES" class="form-label">
-                    WRCSO 2025 Competition Information Resources
+                    WRCSO 2026 Competition Information Resources
                   </label>
                   <select
                     type="text"
