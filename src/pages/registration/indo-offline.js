@@ -13,6 +13,7 @@ function IndonesiaOffline() {
   const maxSchoolChars = 500; // maximum character limit
   const maxProjectChars = 160; // maximum character limit
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [categoryPrice, setCategoryPrice] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -48,10 +49,12 @@ function IndonesiaOffline() {
     // Logic to determine the price based on the selected category
     switch (value) {
       case "World Robotics & Computer Science Olympiad - Offline Competition":
+        setCategoryPrice("RP 3.500.000");
         break;
-      case "World Robotics & Computer Science Olympiad - Offline Competition + Excursion":
+      // case "World Robotics & Computer Science Olympiad - Offline Competition + Excursion":
         break;
       default:
+        setCategoryPrice("");
         break;
     }
   };
@@ -120,6 +123,7 @@ function IndonesiaOffline() {
           namaLengkap: selectedMaxNamaLengkap,
           projectTitle: selectedMaxProject,
           category: selectedCategory,
+          categoryPrice: categoryPrice,
           namasekolah: selectedNamaSekolah,
         };
 
@@ -239,9 +243,9 @@ function IndonesiaOffline() {
                     <option value="World Robotics & Computer Science Olympiad - Offline Competition">
                       Offline Competition
                     </option>
-                    <option value="World Robotics & Computer Science Olympiad - Offline Competition + Excursion">
+                    {/* <option value="World Robotics & Computer Science Olympiad - Offline Competition + Excursion">
                       Offline Competition + Excursion
-                    </option>
+                    </option> */}
                   </select>
                 </div>
               </div>
@@ -257,8 +261,8 @@ function IndonesiaOffline() {
                       first, in the following format:
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
-                    <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Kamal Putra Simatupang</h6>
+                    <h6>Nur Alif Rajaloa Hidayat</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea
@@ -582,6 +586,21 @@ function IndonesiaOffline() {
                     placeholder="Enter the Name of the Competition"
                   ></textarea>
                   <div className="mt-5" id="form_alerts"></div>
+                </div>
+                {/* Price Column */}
+                <div className="input-box invisible">
+                  <label htmlFor="CATEGORY_PRICE" className="form-label ">
+                    Registration Fee
+                  </label>
+                  <input
+                    type="text"
+                    id="CATEGORY_PRICE"
+                    name="CATEGORY_PRICE"
+                    className="form-control"
+                    value={categoryPrice}
+                    readOnly
+                    placeholder="Price will appear based on the selected category"
+                  />
                 </div>
               </div>
               {/* PROJECT DETAILS END */}

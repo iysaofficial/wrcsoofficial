@@ -212,7 +212,7 @@ function IndonesiaOnline() {
               <div className="user-details">
                 <div className="input-box">
                   <label className="form-label" value="Indonesian Participants">
-                    Participant Category
+                    Categories Participants
                   </label>
                   <input
                     type="text"
@@ -256,8 +256,8 @@ function IndonesiaOnline() {
                       first, in the following format:
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
-                    <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Kamal Putra Simatupang</h6>
+                    <h6>Nur Alif Rajaloa Hidayat</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea

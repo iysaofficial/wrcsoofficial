@@ -19,6 +19,8 @@ export default function InternationalOffline() {
   const [countdown, setCountdown] = useState(5);
   const [canClick, setCanClick] = useState(false);
   const navigate = useNavigate(); // React Router hook untuk navigasi
+  const [phoneCodes, setPhoneCodes] = useState([]);
+  const [phoneCodesLoading, setPhoneCodesLoading] = useState(true);
 
   const handleInputNameChange = (e) => {
     const { value } = e.target;
@@ -49,8 +51,8 @@ export default function InternationalOffline() {
     switch (value) {
       case "World Robotics & Computer Science Olympiad - Offline Competition":
         break;
-      case "World Robotics & Computer Science Olympiad - Offline Competition + Excursion":
-        break;
+      // case "World Robotics & Computer Science Olympiad - Offline Competition + Excursion":
+      //   break;
       default:
         break;
     }
@@ -64,6 +66,35 @@ export default function InternationalOffline() {
       navigate("/homeinter"); // Navigasi ke halaman HomeIndo
     }
   }, [navigate]);
+
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all?fields=name,idd")
+      .then((response) => response.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          const codes = data
+            .filter(
+              (country) =>
+                country.idd && country.idd.root && country.idd.suffixes
+            )
+            .map((country) => ({
+              name: country.name.common,
+              code:
+                country.idd.root +
+                (country.idd.suffixes ? country.idd.suffixes[0] : ""),
+            }))
+            .sort((a, b) => a.name.localeCompare(b.name));
+          setPhoneCodes(codes);
+        } else {
+          console.error("API response is not an array:", data);
+        }
+        setPhoneCodesLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching phone codes:", error);
+        setPhoneCodesLoading(false);
+      });
+  }, []);
 
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbwreaO9HgkN7veGjkTxwRKi1ETnSeybtpfNaxHSl3R-08qRY0MbtkbzgbgROcnJEKNt/exec";
@@ -245,9 +276,9 @@ export default function InternationalOffline() {
                     <option value="World Robotics & Computer Science Olympiad - Offline Competition">
                       Offline Competition
                     </option>
-                    <option value="World Robotics & Computer Science Olympiad - Offline Competition + Full Package">
+                    {/* <option value="World Robotics & Computer Science Olympiad - Offline Competition + Full Package">
                       Offline Competition + Full Package
-                    </option>
+                    </option> */}
                   </select>
                 </div>
               </div>
@@ -264,8 +295,8 @@ export default function InternationalOffline() {
                       the following format:
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
-                    <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
+                    <h6>Kamal Putra Simatupang</h6>
+                    <h6>Nur Alif Rajaloa Hidayat</h6>
                     <h6>Irsyad Zaidan</h6>
                   </label>
                   <textarea
@@ -312,67 +343,15 @@ export default function InternationalOffline() {
                     required
                   >
                     <option value="">--Choose Phone Code--</option>
-                    <option value="Afganistan +93">Afganistan +93</option>
-                    <option value="Afrika Selatan +27">
-                      Afrika Selatan +27
-                    </option>
-                    <option value="Afrika Tengah +236">
-                      Afrika Tengah +236
-                    </option>
-                    <option value="Albania +355">Albania +355</option>
-                    <option value="Algeria +213">Algeria +213</option>
-                    <option value="Amerika Serikat +1">
-                      Amerika Serikat +1
-                    </option>
-                    <option value="Arab Saudi +966">Arab Saudi +966</option>
-                    <option value="Australia +61">Australia +61</option>
-                    <option value="Azerbaijan +994">Azerbaijan +994</option>
-                    <option value="Austria +43">Austria +43</option>
-                    <option value="Bangladesh +880">Bangladesh +880</option>
-                    <option value="Belanda +31">Belanda +31</option>
-                    <option value="Belarus +375">Belarus +375</option>
-                    <option value="Bolivia +591">Bolivia +591</option>
-                    <option value="Brasil +55">Brasil +55</option>
-                    <option value="Brunei Darussalam +673">
-                      Brunei Darussalam +673
-                    </option>
-                    <option value="China +86">China +86</option>
-                    <option value="Filipina +63">Filipina +63</option>
-                    <option value="Finlandia +358">Finlandia +358</option>
-                    <option value="Hongaria +36">Hongaria +36</option>
-                    <option value="Hongkong +852">Hongkong +852</option>
-                    <option value="India +91">India +91</option>
-                    <option value="Irak +964">Irak +964</option>
-                    <option value="Iran +98">Iran +98</option>
-                    <option value="Irlandia +353">Irlandia +353</option>
-                    <option value="Jepang +81">Jepang +81</option>
-                    <option value="Kamboja +855">Kamboja +855</option>
-                    <option value="Kazakhstan +7">Kazakhstan +7</option>
-                    <option value="Korea Selatan +82">Korea Selatan +82</option>
-                    <option value="Republik Kongo +243">
-                      Republik Kongo +243
-                    </option>
-                    <option value="Kosta Rika +506">Kosta Rika +506</option>
-                    <option value="Lebanon +961">Lebanon +961</option>
-                    <option value="Malaysia +60">Malaysia +60</option>
-                    <option value="Maroko +212">Maroko +212</option>
-                    <option value="Mexico +52">Mexico +52</option>
-                    <option value="Myanmar +95">Myanmar +95</option>
-                    <option value="Nepal +977">Nepal +977</option>
-                    <option value="Pakistan +92">Pakistan +92</option>
-                    <option value="Rumania +40">Rumania +40</option>
-                    <option value="Singapura +65">Singapura +65</option>
-                    <option value="Slovenia +386">Slovenia +386</option>
-                    <option value="Taiwan +886">Taiwan +886</option>
-                    <option value="Thailand +66">Thailand +66</option>
-                    <option value="Turki +90">Turki +90</option>
-                    <option value="Turkmenistan +993">Turkmenistan +993</option>
-                    <option value="Uni Emirat Arab +971">
-                      Uni Emirat Arab +971
-                    </option>
-                    <option value="Uzbekistan +998">Uzbekistan +998</option>
-                    <option value="Vietnam +84">Vietnam +84</option>
-                    <option value="Zimbabwe +263">Zimbabwe +263</option>
+                    {phoneCodesLoading ? (
+                      <option value="" disabled>Loading...</option>
+                    ) : (
+                      phoneCodes.map((country) => (
+                        <option key={country.name} value={`${country.name} ${country.code}`}>
+                          {country.name} {country.code}
+                        </option>
+                      ))
+                    )}
                   </select>
                 </div>
                 <div class="input-box">
