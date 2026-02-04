@@ -49,10 +49,10 @@ function IndonesiaOffline() {
     // Logic to determine the price based on the selected category
     switch (value) {
       case "World Robotics & Computer Science Olympiad - Offline Competition":
-        setCategoryPrice("RP 3.500.000");
+        setCategoryPrice("RP 3.150.000");
         break;
       // case "World Robotics & Computer Science Olympiad - Offline Competition + Excursion":
-        break;
+        // break;
       default:
         setCategoryPrice("");
         break;
