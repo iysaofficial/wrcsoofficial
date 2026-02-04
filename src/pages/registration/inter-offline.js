@@ -296,8 +296,8 @@ export default function InternationalOffline() {
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
                     <h6>Kamal Putra Simatupang</h6>
-                    <h6>Nur Alif Rajaloa Hidayat</h6>
-                    <h6>Irsyad Zaidan</h6>
+                    <h6>Zaidan Prasetya</h6>
+                    <h6>Eki Jordi</h6>
                   </label>
                   <textarea
                     type="text"

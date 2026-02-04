@@ -262,8 +262,8 @@ function IndonesiaOffline() {
                     </p>
                     <p>Note: maximum 5 members + 1 team leader</p>
                     <h6>Kamal Putra Simatupang</h6>
-                    <h6>Nur Alif Rajaloa Hidayat</h6>
-                    <h6>Irsyad Zaidan</h6>
+                    <h6>Zaidan Prasetya</h6>
+                    <h6>Eki Jordi</h6>
                   </label>
                   <textarea
                     type="text"
@@ -417,7 +417,7 @@ function IndonesiaOffline() {
                       Senior High School
                     </option>
                     <option value="Universitas">University</option>
-                    <option value="Guru & PTK">Teacher & Educator</option>
+                    <option value="Public">Public</option>
                   </select>
                 </div>
                 <div className="input-box">
