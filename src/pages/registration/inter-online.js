@@ -53,7 +53,7 @@ export default function InternationalOnline() {
         setCategoryPrice("$105 USD");
         break;
       case "World Robotics & Computer Science Olympiad - Online Competition + Certificate and Medal (SOUTH EAST ASIA ONLY)":
-        setCategoryPrice("$250 USD");
+        setCategoryPrice("$225 USD");
         break;
       case "World Robotics & Computer Science Olympiad - Online Competition + Certificate and Medal (Exclude SOUTH EAST ASIA)":
         setCategoryPrice("$275 USD");
