@@ -12,7 +12,7 @@ const Hero = () =>{
                 </p>
                  <br />
                 {/* <a href="https://drive.google.com/file/d/10kNf2xxdJAWSw1MYdaSxcUFLiU2AGmNq/view?usp=sharing" target="_blank" rel="noreferrer" className="registration-button fw-bold">Guide Book</a> */}
-                <a href="/homeregist" className="registration-button fw-bold">Coming Soon !</a>
+                <a href="#" className="registration-button fw-bold">Coming Soon !</a>
                 {/* <a className="registration-button fw-bold">Coming Soon</a> */}
             </div>
         </section>

@@ -20,14 +20,14 @@ function HomeRegist() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <a href="#" className="btn btn-action text-center me-lg-5">
+            <button className="btn btn-action text-center me-lg-5">
               Coming Soon{" "}
               <i className="fa-solid fa-earth-americas"></i>
-            </a>
-            <a href="#" className="btn btn-action text-center me-lg-5">
+            </button>
+            <button className="btn btn-action text-center me-lg-5">
               Coming Soon{" "}
               <i className="fa-solid fa-earth-americas"></i>
-            </a>
+            </button>
           </div>
         </div>
       </section>

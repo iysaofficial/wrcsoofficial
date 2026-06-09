@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import '../../css/Regist.css';
 
 import { indonesiaOnlineTerms, indonesiaOfflineTerms } from "../../pages/data/terms";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function HomeIndo() {
   const [showModal, setShowModal] = useState(false);
@@ -19,11 +19,6 @@ function HomeIndo() {
     setTermsAccepted(false); // Reset state persetujuan
     setHasViewedTerms(false); // Reset state sudah melihat
     setShowModal(true); // Tampilkan modal
-  };
-
-  const handleViewTerms = () => {
-    window.open("https://drive.google.com/file/d/1KOtyI8EZO42INO4Q_IeiTmBQCc_8JtTl/view?usp=sharing", "_blank");
-    setHasViewedTerms(true);
   };
 
   const handleAccept = () => {
@@ -52,18 +47,18 @@ function HomeIndo() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <a
+            <button
               className="btn btn-action text-center me-lg-5 "
               onClick={() => handleOpenModal("#", indonesiaOnlineTerms)}
             >
               Coming Soon{" "}<i className="fa-solid fa-earth-americas"></i>
-            </a>
-            <a
+            </button>
+            <button
               className="btn btn-action text-center me-lg-5 "
               onClick={() => handleOpenModal("#", indonesiaOfflineTerms)}
             >
               Coming Soon{" "}<i className="fa-solid fa-earth-americas"></i>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -105,7 +100,7 @@ function HomeIndo() {
                 </div>
                 <label htmlFor="terms">
                   I have read and agree to the{" "}
-                  <a href="#" onClick={(e) => { e.preventDefault(); handleViewTerms(); }}>
+                  <a href="https://drive.google.com/file/d/1KOtyI8EZO42INO4Q_IeiTmBQCc_8JtTl/view?usp=sharing" target="_blank" rel="noreferrer" onClick={() => setHasViewedTerms(true)}>
                     Terms & Conditions
                   </a>.
                 </label>
