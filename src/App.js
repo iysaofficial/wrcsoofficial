@@ -17,6 +17,7 @@ import HomeInter from './pages/registration/homeinter';
 import InternationalOffline from './pages/registration/inter-offline';
 import InternationalOnline from './pages/registration/inter-online';
 import Lowtahun from "./pages/low/lowtahun";
+import Certtahun from "./pages/certificate/certtahun";
 import Kategori25 from "./pages/low/2025/kategori25";
 import Jenjangofl25 from "./pages/low/2025/jenjangofl25";
 import Jenjangonl25 from "./pages/low/2025/jenjangonl25";
@@ -42,6 +43,7 @@ function App() {
             <Route path="/interonline" element={<InternationalOnline/>} />
             <Route path="/thankyou" element={<ThankyouPage/>} />
             <Route path="/listofwinner" element={<Lowtahun/>} />
+            <Route path="/certificatesupervisor" element={<Certtahun/>} />
             <Route path="/kategori25" element={<Kategori25 />} />
             <Route path="/jenjangofl25" element={<Jenjangofl25 />} />
             <Route path="/jenjangonl25" element={<Jenjangonl25 />} />

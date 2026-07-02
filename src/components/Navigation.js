@@ -91,20 +91,7 @@ const Navigation = () => {
                         </ul>
                     </li> */}
             <li className="menu-item fw-bold">
-              <div className="sub-btn">
-                Certificate Supervisor <i className="fas fa-angle-down"></i>
-                               </div>
-              <ul className="sub-menu">
-                <li className="sub-item">
-                  <a
-                    href="https://drive.google.com/drive/folders/16zXzfdQa0hecm0OyL_QQsyPQCpHaGBgN?usp=sharing"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Certificate Supervisor 2025
-                  </a>
-                </li>
-              </ul>
+              <a href="/certificatesupervisor">Certificate Supervisor</a>
             </li>
             <li className="menu-item fw-bold">
               <div className="sub-btn">
