@@ -15,6 +15,12 @@ const Lowtahun = () => {
           <div className="hero-btn text-center">
             <a
               className="btn m-2"
+              href="/kategori26"
+            >
+              2026
+            </a>
+            <a
+              className="btn m-2"
               href="/kategori25"
             >
               2025

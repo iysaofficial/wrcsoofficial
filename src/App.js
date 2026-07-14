@@ -18,9 +18,15 @@ import InternationalOffline from './pages/registration/inter-offline';
 import InternationalOnline from './pages/registration/inter-online';
 import Lowtahun from "./pages/low/lowtahun";
 import Certtahun from "./pages/certificate/certtahun";
+
 import Kategori25 from "./pages/low/2025/kategori25";
 import Jenjangofl25 from "./pages/low/2025/jenjangofl25";
 import Jenjangonl25 from "./pages/low/2025/jenjangonl25";
+
+import Kategori26 from "./pages/low/2026/kategori26";
+import Jenjangofl26 from "./pages/low/2026/jenjangofl26";
+import Jenjangonl26 from "./pages/low/2026/jenjangonl26";
+
 import ThankyouPage from "./pages/registration/thankyou";
 
 function App() {
@@ -47,6 +53,9 @@ function App() {
             <Route path="/kategori25" element={<Kategori25 />} />
             <Route path="/jenjangofl25" element={<Jenjangofl25 />} />
             <Route path="/jenjangonl25" element={<Jenjangonl25 />} />
+            <Route path="/kategori26" element={<Kategori26 />} />
+            <Route path="/jenjangofl26" element={<Jenjangofl26 />} />
+            <Route path="/jenjangonl26" element={<Jenjangonl26 />} />
 
         </Routes>
       </Router>
