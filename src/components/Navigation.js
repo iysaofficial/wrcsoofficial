@@ -59,6 +59,15 @@ const Navigation = () => {
               <ul className="sub-menu">
                 <li className="sub-item">
                   <a
+                                      href="https://drive.google.com/file/d/1W7LzV3LM9bt6m5rDpLP0UyRYugW98zdW/view?usp=sharing"
+                                      target="_blank"
+                                      rel="noreferrer"
+                                    >
+                    Press Release 2026
+                  </a>
+                </li>
+                <li className="sub-item">
+                  <a
                                       href="https://drive.google.com/file/d/14L1ZDr-XXu60TcuA9GzhmA3YhCZgfXRu/view?usp=sharing"
                                       target="_blank"
                                       rel="noreferrer"
