@@ -1,0 +1,19 @@
+.news-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.news-card .card-title {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.news-section a {
+  text-decoration: none;
+}

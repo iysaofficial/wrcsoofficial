@@ -107,6 +107,11 @@ const Navigation = () => {
                     Press Release 2025
                   </a>
                 </li>
+                <li className="sub-item">
+                  <a href="/news">
+                    News
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="menu-item fw-bold">
