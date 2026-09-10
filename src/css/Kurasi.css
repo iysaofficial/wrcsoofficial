@@ -1,0 +1,112 @@
+/*
+ * Halaman daftar berkas kurasi.
+ *
+ * Berdiri sendiri, tidak menumpang gaya hero: hero adalah gambar latar penuh
+ * setinggi layar dengan teks di tengah, dan daftar berkas menuntut
+ * kebalikannya — latar tenang, teks rata kiri, isi yang bisa dipindai.
+ *
+ * Warna aksennya diambil dari CSS situs ini sendiri, bukan warna baru, supaya
+ * halaman ini tidak terlihat seperti tempelan dari situs lain.
+ */
+
+.kurasi-section {
+  --kurasi-aksen: #483d8b;
+  --kurasi-aksen-gelap: #332b63;
+  background: #f4f6fb;
+  min-height: 70vh;
+  /*
+   * `padding-top` di sini cuma nilai awal sebelum JavaScript mengukur tinggi
+   * navbar yang sebenarnya — lihat catatan di CurationTahun. Nilainya sengaja
+   * cukup besar supaya halaman tidak berkedip dengan judul tertutup pada
+   * frame pertama.
+   */
+  padding: 8rem 1.25rem 4rem;
+}
+
+.kurasi-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.kurasi-container h1 {
+  margin: 0 0 0.35rem;
+  color: var(--kurasi-aksen-gelap);
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 700;
+}
+
+.kurasi-ringkas {
+  margin: 0 0 1.75rem;
+  color: #5b6273;
+  font-size: 0.9rem;
+}
+
+.kurasi-kabar {
+  margin: 2.5rem 0;
+  color: #5b6273;
+  font-size: 0.95rem;
+}
+
+.kurasi-kartu-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+
+.kurasi-kartu {
+  position: relative;
+  display: block;
+  padding: 1.1rem 1.15rem;
+  background: #fff;
+  border: 1px solid #dfe3ec;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+a.kurasi-kartu:hover {
+  border-color: var(--kurasi-aksen);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  transform: translateY(-1px);
+}
+
+/*
+ * Warna DAN garis bawah ditulis eksplisit. Situs-situs ini me-reset
+ * `text-decoration` dan warna tautan secara global, jadi kartu yang bisa
+ * diklik terlihat persis seperti kartu mati kalau tidak dinyatakan di sini.
+ */
+.kurasi-kartu h2 {
+  margin: 0 0 0.35rem;
+  color: var(--kurasi-aksen-gelap);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+a.kurasi-kartu h2 { text-decoration: underline; }
+
+/*
+ * Nama berkas kurasi panjang, tidak berspasi, dan sering hanya berbeda di
+ * ujungnya — "..._Life_Sciences-1786692300149.pdf". Ia harus membungkus;
+ * dipotong dengan elipsis justru menghapus bagian yang membedakannya.
+ */
+.kurasi-nama {
+  margin: 0;
+  color: #7b8296;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.kurasi-badge {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  background: #e6f2f2;
+  color: #1a6a6a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
