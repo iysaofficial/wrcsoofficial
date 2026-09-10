@@ -119,6 +119,14 @@ const Navigation = () => {
                 Curation <i className="fas fa-angle-down"></i>
                                </div>
               <ul className="sub-menu">
+                {/*
+                  2026 dilayani halaman sendiri, dibaca dari API dasbor.
+                  Edisi lama tetap menunjuk Drive: berkasnya tidak pernah
+                  masuk dasbor.
+                */}
+                <li className="sub-item">
+                  <a href="/Curation/2026">Curation 2026</a>
+                </li>
                 <li className="sub-item">
                   <a
                                       href="https://drive.google.com/drive/folders/1vzjkpg5T_ecjvgeI5Z6kN_bfRbYLxBYl?usp=sharing"
